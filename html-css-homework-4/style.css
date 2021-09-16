@@ -1,0 +1,76 @@
+body,
+html {
+	width: 100%;
+	background: linear-gradient(15deg, rgba(0,255,250,0.1) 0%, rgba(217,255,142,0.2) 37%, rgba(214,255,154,0.3) 57%, rgba(0,184,63,0.3) 91%);
+	font-size: 16px;
+}
+.person__info {
+	display: flex;
+	flex-direction: row;
+}
+.person__details {
+	padding-left: 150px;
+	padding-right: 150px;
+}
+.avatar {
+	/* размер поля аватара  */
+	position: absolute;
+	left: 150px;
+	top: 32px;
+	width: 300px;
+}
+.avatar__picture {
+	/* позиция и дизайн картинки  */
+	transition: transform 2s;
+	position: relative;
+	border-style: solid;
+	border-radius: 100%;
+	border-width: 30px;
+	border-color: white;
+}
+.avatar__picture:hover{
+	transform: rotateZ(180deg);
+	transition: transform 2s ease;
+}
+.contacts {
+	font-size: 18px;
+	padding-top: 70px;
+	padding-left: 482px;
+	padding-bottom: 140px;
+}
+.contacts__name {
+	/* Размер шрифта */
+	font-size: 32px;
+	font-weight: 600;
+}
+.contacts__role {
+	position: relative;
+	font-size: 19.2px;
+	font-weight: 600;
+}
+.contacts__link {
+	top: 32px;
+}
+.contacts__title{
+	font-style: italic;
+	font-weight: 600;
+}
+.contacts__item {
+	position: relative;
+	top: 32px;
+}
+.contacts__link {
+	/* цвет ссылок */
+	color: grey;
+}
+.paragraph {
+	font-weight: 600; 
+	padding-top: 16px;
+	text-indent: 20px;
+}
+.paragraph_last {
+	font-weight: 600;
+	position:relative;
+	text-indent: 20px;
+	padding-bottom: 48px;
+}
