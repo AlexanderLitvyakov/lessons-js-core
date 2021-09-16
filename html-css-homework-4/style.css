@@ -19,8 +19,39 @@ html {
 	top: 32px;
 	width: 300px;
 }
+.front, .back {
+	margin-top: -10px;
+	width: 20rem;
+	height: 20rem;
+	border-color: #061d86;
+	border-style: double;
+	border-width: 5px;
+	border-radius: 40px;
+	overflow: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: transform 2s linear;
+  }
+.front {
+	background-image: url(../html-css-homework-4/avatar.jpg);
+	background-size: contain;
+	background-repeat: round;
+	transform: perspective(600px) rotateY(0deg);
+}
+.back {
+	background-image: url(../html-css-homework-4/logosber.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	transform: perspective(600px) rotateY(180deg);
+}
+.avatar:hover > .front{transform: perspective(600px) rotateY(-180deg);
+}
+.avatar:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
 .avatar__picture {
 	/* позиция и дизайн картинки  */
+	background-image: url(../html-css-homework-4/avatar.jpg);
 	transition: transform 2s;
 	position: relative;
 	border-style: solid;
@@ -28,6 +59,7 @@ html {
 	border-width: 30px;
 	border-color: white;
 }
+
 .avatar__picture:hover{
 	transform: rotateZ(180deg);
 	transition: transform 2s ease;
@@ -59,10 +91,26 @@ html {
 	position: relative;
 	top: 32px;
 }
+:root{
+	--mainColor: #d9a80a
+  }
 .contacts__link {
 	/* цвет ссылок */
-	color: grey;
+	background: linear-gradient(
+    to bottom, var(--mainColor) 0%,
+    var(--mainColor) 100%
+  );
+background-position: 0 100%;
+background-repeat: repeat-x;
+background-size: 4px 4px;
+color: #061d86;
+text-decoration: underline;
+transition: background-size .2s;
 }
+.contacts__link:hover {
+  background-size: 4px 50px;
+ }
+
 .paragraph {
 	font-weight: 600; 
 	padding-top: 16px;
